@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WEDDINGPARTY</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,target-densitydpi=device-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<script src="js/base/base.js"></script>
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<style>
+/*刮刮卡*/
+aside.scratch { width: 100%;height: 100%;overflow: hidden;position: absolute;left: 0;top: 0;z-index: 999;background-size: cover; }
+aside.scratch canvas{ position: absolute; left: 0; top: 0;}
+</style>
+</head>
+<body>
+<!--------------------------------------------------------------html区域-------------------------------------------------------------------------------------->
+
+<article class="container" style="display: none;">
+	<div class="sky" id="skyBox"></div>
+    <div class="boxCont">
+        <section class="index">
+        	<div class="bgimg"></div>
+        	<div class="cover_img"></div>
+        	<div class="headimg">
+        		<img src="images/sutter/himg-5.jpg"/>
+        	</div>
+	        <div class="wedding_word" id="wedding_bubble"></div>
+	        <div class="info">
+	            <p class="txt">张俊刚<span><img src="images/common/heart.png"/></span>刘丹丹</p>
+	            <p class="time">2017-10-10</p>
+	            <p class="address">妙水寺</p>
+	        </div>
+	        <div class="ar heart_shake" id="ar"></div>
+	    </section>
+	    
+		<section class="page_a">
+			<div class="bgimg"></div>
+	    	<div class="left_word">
+	    		<p>轻吟一句情话，绽放一地情花<br>执笔一副情画，覆盖一片喧哗<br>一加一有时候不等于二<br>等于我们</p>
+	    	</div>
+	    	<div class="right_word">
+	    		<p>我们邀请您<br>共饮一杯清茶<br>挽起一面轻纱<br>共度星光时差</p>
+	    	</div>
+	    	<!--<div class="img img1">
+	    		<img src="images/weddingimg/img2.jpg"/>
+	    	</div>-->
+	    	<div class="img img2">
+	    		<img src="images/weddingimg/img3.jpg"/>
+	    	</div>
+	    </section>
+	    
+	    <section class="page_b">
+	    	<div class="bgimg"></div>
+        	<div class="longword">
+        		<img src="images/weddingimg/longword.png" class="longwordimg"/>
+        	</div>
+        	<div class="ourbox">
+        		<img src="images/weddingimg/grow.png" class="growheart"/>
+        		<img src="images/weddingimg/our.png" class="our"/>
+        	</div>
+        	<div class="verword clearFix">
+        		<div class="word word1">&nbsp;&nbsp;&nbsp;&nbsp;宜言饮酒，与子偕老。</div>
+        		<div class="word word2">琴瑟在御，莫不静好。</div>
+        	</div>
+	    </section>
+	    
+	    <section class="page_c">
+	    	<div class="bgimg"></div>
+	    	<div class="squarbox"></div>
+	    	<div class="wordbox">
+	    		<p class="squarword">以前最美的遇见是你<br>未来最美的相伴是你</p>
+	    	</div>
+	    	<div class="past">
+	    		<img src="images/weddingimg/past.jpg" alt="" />
+	    	</div>
+	    	<div class="maskimg"><img src="images/weddingimg/filter.png"/></div>
+	    	<div id="shutter-banner" class="shutter">
+		        <ul class="shutter-imgs-box">
+		            <li data-type="random" data-img="images/sutter/sutter2.jpg">
+		                <img src="images/sutter/sutter2.jpg">
+		            </li>
+		            <li data-type="random" data-img="images/sutter/himg-1.jpg">
+		                <img src="images/sutter/himg-1.jpg">
+		            </li>
+		            <li data-type="random" data-img="images/sutter/sutter1.jpg">
+		                <img src="images/sutter/sutter1.jpg">
+		            </li>
+		            <li data-type="random" data-img="images/sutter/sutter3.jpg">
+		                <img src="images/sutter/sutter3.jpg">
+		            </li>
+		            <li data-type="random" data-img="images/sutter/himg-2.jpg">
+		                <img src="images/sutter/himg-2.jpg">
+		            </li>
+		            <li data-type="random" data-img="images/sutter/sutter4.jpg">
+		                <img src="images/sutter/sutter4.jpg">
+		            </li>
+		            <li data-type="random" data-img="images/sutter/himg-7.jpg">
+		                <img src="images/sutter/himg-7.jpg">
+		            </li>
+		            <li data-type="random" data-img="images/sutter/sutter6.jpg">
+		                <img src="images/sutter/sutter6.jpg">
+		            </li>
+		            <li data-type="random" data-img="images/sutter/himg-3.jpg">
+		                <img src="images/sutter/himg-3.jpg">
+		            </li>
+		            <li data-type="random" data-img="images/sutter/himg-4.jpg">
+		                <img src="images/sutter/himg-4.jpg">
+		            </li>
+		        </ul>
+		        <div class="shutter-effect-box"></div>
+		        <div class="info-word"></div>
+		        <div class="shutter-next aniRight"></div>
+        		<div class="shutter-prev aniLeft"></div>
+		        <div class="pagination"></div>
+        	</div>
+	    </section>	    
+	    <section class="page_d">	    		    	
+	    	<div class="bgimg"></div>
+	    	<img src="images/weddingimg/wedding-5.jpg" alt="" class="img1 img" />
+	    	<img src="images/weddingimg/wedding-2.jpg" alt="" class="img2 img" />
+	    	<img src="images/weddingimg/wedding-6.jpg" alt="" class="img3 img" />
+	    	<p class="word">你是我人生最大的惊喜</p>
+	    </section>
+	    <section class="end">
+	    	<div class="endimg">
+	    		<img src="images/weddingimg/love.png" alt="" class="love" />
+	    		<img src="images/weddingimg/you.png" alt="" class="you" />
+	    		<img src="images/weddingimg/forever.png" alt="" class="forever" />
+	    		<img src="images/weddingimg/flower.png" alt="" class="flower" />
+	    	</div>
+	    	<!--<div class="imgbox">
+	    		<img src="images/sutter/himg-4.jpg" alt="" />
+	    	</div>-->
+	    	<div class="info">
+	            <p class="time">2017-10-10</p>
+	            <p class="address">妙水寺</p>
+	        </div>
+	    </section>
+    </div>
+</article>
+
+<aside class="scratch" style="display: none;"></aside>
+
+
+<!--------------------------------------------------------------javascript区域-------------------------------------------------------------------------------------->
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="js/base/jquery.js"></script>
+<script src="js/base/framwork.js"></script>
+<script src="js/base/audio.js"></script>
+<script src="js/canvas/brush.js"></script>
+<script src="js/widget/iphone.scratch.js"></script>
+<script src="js/widget/iphone.snow.js"></script>
+<script src="js/widget/iphone.bubble.js"></script>
+<script src="js/widget/iphone.page.js"></script>
+<script src="js/shutter.js"></script>
+<script src="js/base/share.js"></script>
+<!--<script src="js/base/user.js"></script>-->
+<script>ibase.load('js/index.js');</script>
+<script>
+$(document).ready(function(e) {	
+	// 框架
+	var loadBox=$('.loadBox');
+	var ticketBox=$('aside.scratch');//刮刮卡
+	var containerBox=$('article.container');
+	var skyBox = containerBox.find("#skyBox");//玫瑰花瓣
+	var bubbleBox = $("#wedding_bubble");//心
+	var stageBox=containerBox.find('section');
+	console.log('stageBox:'+stageBox.length);
+	var stageNow=0;
+	var shutterBanner;
+	loadFunc();
+	
+	function loadFunc(){
+		//载入图
+		loadBox.show();
+		var loadPer=loadBox.children();
+		var loader = new PxLoader();
+		console.log('img:'+$('img').length);
+		var img=$('img');
+		img.each(function(i) {
+			if(i<=Math.floor(img.length*0.25)) loader.addImage($(this).attr('src'));
+            else return false;
+        });
+		
+		loader.addProgressListener(function(e) { 
+			//loadPer.html(Math.round(e.completedCount/e.totalCount*100)+'%'); 
+//			console.log(Math.round(e.completedCount/e.totalCount*100)+'%');
+		}); 
+		
+		loader.addCompletionListener(function() {
+			if(window.console) console.log('load complete');
+			loader=null;
+//			init();
+			icom.fadeIn(ticketBox,500,function(){
+				ticketBox.css('background-image', 'url(images/weddingimg/wedding-8.jpg)');
+				scratch_handler();
+			});
+//			scratch_handler();
+			setTimeout(function(){
+				icom.fadeOut(loadBox,500,function(){
+					$(this).remove();
+				});
+			},500);
+		});			
+		loader.start();	
+	}//end func	
+	function scratch_handler(){	
+		ticketBox.scratchOn('images/weddingimg/cardmask.png',{line:60,brush:'images/weddingimg/brush.png',onComplete:scratchComplete});
+	}//end func
+	
+	function scratchComplete(){
+		console.log('scratchComplete');
+		ticketBox.remove();
+		setTimeout(rose_handler,500);
+//		$(".bgimg img").addClass("scal_opacity");
+		init();
+	}//end func
+	
+	function rose_handler(){
+		skyBox.snowOn({num:16,offset:-$(window).width()*0.3,roll2D:true,speed:1800});
+	}//endfunc
+	
+	
+	function init(){
+		icom.fadeIn(containerBox);
+		stageNow=0;
+		containerBox.pageOn({onStart:motion_start,onComplete:motion_complete});
+		motion_add();
+		shutter_handler();
+		//测试
+		//containerBox.pageGoto(1,true);
+		$('.ar').on('touchmove',function(e){
+			e.stopImmediatePropagation();
+			console.log('touchmove');
+		})
+	}//end init
+	
+	function motion_start(id){
+		stageNow=id;
+		motion_add();
+	}//edn func
+	
+	function motion_complete(id){
+		if(id!=0){
+			bubbleBox.bubbleOff();
+			$("section.index .bgimg").removeClass("scal_opacity");
+		}
+		if(id!=1){
+			$("section.page_a .bgimg").removeClass("scal_opacity");
+		}
+		if(id!=2){
+			$("section.page_b .bgimg").removeClass("rotateInDownRight");
+			$("section.page_b .growheart").removeClass("grow_ani");
+			$("section.page_b .our").removeClass("our_ani");
+			$(".longwordimg").removeClass("swing");
+		}
+		if(id!=3){
+			$("section.page_c .bgimg").removeClass("rotateInDownLeft");
+			$("section.page_c .wordbox").removeClass("grow_ani");
+		}
+		if(id!=4){
+			$("section.page_d p.word").removeClass("tada");
+		}
+		if(id!=5){
+			$("section.page_e .flower").removeClass("rotate_ani");
+		}
+	}//edn func
+	
+	function motion_add(){
+		console.log('stageNow:'+stageNow);
+		var stage=stageBox.eq(stageNow);
+		switch(stageNow){
+			case 0:
+				$("section.index .bgimg").addClass("scal_opacity");
+				$("section.index .cover_img").addClass("cover_ani");
+				stage.children('.headimg').css({opacity:0,scale:0.8}).transition({opacity:1,scale:1,delay:2000},1000,'in-out');
+				stage.children('.wedding_word').css({opacity:0,scale:0.6}).transition({opacity:1,scale:1,delay:2500},1000,'in-out',function(){
+					bubbleBox.bubbleOn({num:6,x:$("#wedding_bubble").width()*0.66,y:$("#wedding_bubble").height()*0.33,roll2D:false,swing:true,swingMax:10});
+				});
+				$(".txt").css({x:form_math($('.txt'),3),opacity:0}).transition({x:0,opacity:1,delay:3000},1000,'in-out');
+				$('.time').css({x:form_math($('.time'),1),opacity:0}).transition({x:0,opacity:1,delay:3500},1000,'in-out');
+				$('.address').css({opacity:0,scale:0.3}).transition({opacity:1,scale:1,delay:4000},1000,'in-out');
+				stage.children(".ar").css({opacity:0}).transition({opacity:1,delay:4100},800,'in-out');
+			break;
+			case 1:
+				icom.fadeIn(stage,500);
+				$("section.page_a .bgimg").addClass("scal_opacity");
+				stage.children('.left_word').css({x:form_math(stage.children('.left_word'),3),opacity:0}).transition({x:0,opacity:1,delay:1800},1000,'in-out',function(){
+					$(this).find("p").css({rotateX:0,opacity:0}).transition({rotateX:360,opacity:1},1000);
+				});
+				stage.children('.right_word').css({x:form_math(stage.children('.left_word'),1),opacity:0}).transition({x:0,opacity:1,delay:2300},1000,'in-out',function(){
+					$(this).find("p").css({rotateY:0,opacity:0}).transition({rotateY:360,opacity:1},1000);
+				});
+//				stage.children('.img1').css({x:form_math(stage.children('.img1'),1),opacity:0,"border-radius":0,scale:1}).transition({x:0,opacity:1,scale:1,delay:1750},1000,"in-out").transition({"border-radius":"50%",scale:1},1200,'in-out').transition({scale:0},1000,'linear');
+				stage.children('.img2').css({x:form_math(stage.children('.img2'),3),opacity:0,"border-radius":0}).transition({x:0,opacity:1,delay:2000},1000,"in-out").transition({"border-radius":"50%"},1200,'in-out');
+			break;
+			case 2:		
+				icom.fadeIn(stage,500);
+				stage.children(".bgimg").addClass("rotateInDownRight");
+				stage.children(".longword").css({y:form_math(stage.children('.longword'),0),opacity:0}).transition({y:0,opacity:1,delay:1000},1000,function(){
+					$(".longwordimg").addClass("swing");
+				});
+				stage.children(".ourbox").css({opacity:0}).transition({opacity:1,delay:1800},1000);
+				setTimeout(function(){
+					stage.children('.ourbox').find(".growheart").addClass("grow_ani");
+					stage.children('.ourbox').find(".our").addClass("our_ani");
+				},1800)
+				$(".word1").css({x:"5rem",opacity:0}).transition({x:0,opacity:1,delay:1600},1000);
+				$(".word2").css({x:"5rem",opacity:0}).transition({x:0,opacity:1,delay:1400},1000);
+			break;
+			case 3:
+				icom.fadeIn(stage,500);
+				stage.children(".bgimg").addClass("rotateInDownLeft");				
+				stage.children('.squarbox').css({opacity:0,transform:'perspective(5rem) rotateZ(0)'}).transition({opacity:1,transform:'perspective(5rem) rotateZ(225deg)',delay:1000},1200,'in-out');
+				$(".wordbox").delay(1100).addClass("grow_ani");
+				stage.children('.past').css({y:form_math(stage.children('.past'),0),opacity:0,"border-radius":"0"}).transition({y:0,opacity:1,delay:800},1000,"in-out").transition({"border-radius":"50% 80% 30% 60%"},1000,'in-out');
+				stage.children(".shutter").css({opacity:0}).transition({opacity:1,delay:1350},1000);
+			break;
+			case 4:
+				icom.fadeIn(stage,500);		
+				stage.children('img.img1').css({opacity:0,transform:'perspective: 3rem; rotateZ(0deg) translateX(-5rem)'}).transition({opacity:1,transform:'perspective: 3rem; rotateZ(-4deg) translateX(0)',delay:1000},1500,'in-out');
+				stage.children('img.img2').css({opacity:0,transform:'perspective: 3rem; rotateZ(0deg) translateX(5rem)'}).transition({x:0,opacity:1,transform:'perspective: 3rem; rotateZ(5deg) translateX(0)',delay:2200},1500,'in-out');
+				stage.children('img.img3').css({opacity:0,scale:0.3}).transition({opacity:1,scale:1,delay:3400},1500,'in-out');
+				stage.children('p.word').css({y:form_math(stage.children('p.word'),2),opacity:0,scale:0.3}).transition({y:0,opacity:1,scale:1,delay:4000},1500,'in-out',function(){
+					$(this).addClass("tada");
+				});
+				
+//				stage.children('img.logo').css({opacity:0,scale:0.4}).transition({opacity:1,scale:0.5,delay:1000},3000,'in-out');
+			break;
+			case 5:
+				icom.fadeIn(stage,500);
+				skyBox.snowOff();
+				$(".love").css({x:"-5rem",opacity:0}).transition({x:0,opacity:1,delay:0},1000,'in-out');
+				$(".you").css({x:"5rem",opacity:0}).transition({x:0,opacity:1,delay:300},1000,'in-out');
+				$(".flower").css({scale:0.3,opacity:0}).transition({scale:1,opacity:1,delay:1000},500,'in-out',function(){
+					$(this).addClass("rotate_ani");
+				});
+				$(".forever").css({y:"5rem",opacity:0}).transition({y:0,opacity:1,delay:600},1000,'in-out');
+				$('.imgbox').css({opacity:0}).transition({opacity:1,delay:1300},1000,'in-out');
+				$('.time').css({x:form_math($('.time'),1),opacity:0}).transition({x:0,opacity:1,delay:2000},1000,'in-out');
+				$('.address').css({opacity:0,scale:0.3}).transition({opacity:1,scale:1,delay:2200},1000,'in-out');
+//				$(".mapcontainer").css({y:"100%",opacity:0}).transition({y:0,opacity:1,delay:800},500);				
+			break;
+		}//end switch
+	}//end func
+	
+	function form_math(obj,type){//滚动方向及距离计算
+		type=type||0;
+		var parent=obj.parent();
+		if(obj){
+			switch(type){
+				case 0://top
+					return -(obj.position().top+obj.outerHeight());
+					break;
+				case 1://right
+					return parent.outerWidth()-obj.position().left;
+					break;
+				case 2://bottom
+					return parent.outerHeight()-obj.position().top;
+					break;
+				case 3://left
+					return -(obj.position().left+obj.outerWidth());
+					break;
+			}//end switch
+		}//end if
+	}//end func
+//	地址
+//	function map_handler(){
+//		var map = new BMap.Map("map");
+//		var point = new BMap.Point(112.84281,34.178611);
+//		map.centerAndZoom(point,14);
+//		var marker = new BMap.Marker(point);
+//		map.addOverlay(marker);
+//		window.setTimeout(function(){  
+//		    map.panTo(new BMap.Point(112.842821,34.178735));    
+//		}, 1000);
+//	}//end func
+	function shutter_handler(){
+		var intro = [{title:"爱要彼此相迎"},{title:"情不知所起，一往而深"},{title:"有你，便是阳光"},{title:"最美的遇见"},{title:"余生，请指教"},{title:"你是我人生最大的惊喜"},{title:"花时间来爱你"},{title:"best love in my life"},{title:"不忘初心"},{title:"相依 相偎"}];
+    	$(".info-word").html('<h1>'+intro[0].title+'</h1>');
+		var shutterBanner = new shutterSwitch();
+	    var opts = {
+	        paginationEvent:true,
+	        delay:7000,
+	        onComplete:function(id){
+	            $(".info-word").html('<h1>'+intro[id].title+'</h1>');
+	        }
+	    }
+	    shutterBanner.init($("#shutter-banner"),opts);
+	}//end func
+});
+</script>
+
+</body>
+</html>
