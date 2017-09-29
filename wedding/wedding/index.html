@@ -13,10 +13,8 @@
 <link rel="stylesheet" type="text/css" href="css/index.css"/>
 <style>
 /*刮刮卡*/
-aside.scratch { width: 100%;height: 100%;overflow: hidden;position: absolute;left: 0;top: 0;z-index: 999;background-image: url(images/weddingimg/wedding-8.jpg);background-size: cover; }
+aside.scratch { width: 100%;height: 100%;overflow: hidden;position: absolute;left: 0;top: 0;z-index: 999;background-size: cover; }
 aside.scratch canvas{ position: absolute; left: 0; top: 0;}
-
-
 </style>
 </head>
 <body>
@@ -162,7 +160,6 @@ aside.scratch canvas{ position: absolute; left: 0; top: 0;}
 <script src="js/shutter.js"></script>
 <script src="js/base/share.js"></script>
 <!--<script src="js/base/user.js"></script>-->
-<script src="http://api.map.baidu.com/api?v=2.0&ak=rvaoOA668rlouTTcU3GPsj0K"></script>
 <script>ibase.load('js/index.js');</script>
 <script>
 $(document).ready(function(e) {	
@@ -198,7 +195,11 @@ $(document).ready(function(e) {
 		loader.addCompletionListener(function() {
 			if(window.console) console.log('load complete');
 			loader=null;
-			init();
+//			init();
+			icom.fadeIn(ticketBox,500,function(){
+				ticketBox.css('background-image', 'url(images/weddingimg/wedding-8.jpg)');
+				scratch_handler();
+			});
 //			scratch_handler();
 			setTimeout(function(){
 				icom.fadeOut(loadBox,500,function(){
@@ -292,11 +293,11 @@ $(document).ready(function(e) {
 				stage.children('.left_word').css({x:form_math(stage.children('.left_word'),3),opacity:0}).transition({x:0,opacity:1,delay:1800},1000,'in-out',function(){
 					$(this).find("p").css({rotateX:0,opacity:0}).transition({rotateX:360,opacity:1},1000);
 				});
-				stage.children('.right_word').css({x:form_math(stage.children('.left_word'),1),opacity:0}).transition({x:0,opacity:1,delay:2350},1000,'in-out',function(){
+				stage.children('.right_word').css({x:form_math(stage.children('.left_word'),1),opacity:0}).transition({x:0,opacity:1,delay:2300},1000,'in-out',function(){
 					$(this).find("p").css({rotateY:0,opacity:0}).transition({rotateY:360,opacity:1},1000);
 				});
 //				stage.children('.img1').css({x:form_math(stage.children('.img1'),1),opacity:0,"border-radius":0,scale:1}).transition({x:0,opacity:1,scale:1,delay:1750},1000,"in-out").transition({"border-radius":"50%",scale:1},1200,'in-out').transition({scale:0},1000,'linear');
-				stage.children('.img2').css({x:form_math(stage.children('.img2'),3),opacity:0,"border-radius":0}).transition({x:0,opacity:1,delay:2200},1000,"in-out").transition({"border-radius":"50%"},1200,'in-out');
+				stage.children('.img2').css({x:form_math(stage.children('.img2'),3),opacity:0,"border-radius":0}).transition({x:0,opacity:1,delay:2000},1000,"in-out").transition({"border-radius":"50%"},1200,'in-out');
 			break;
 			case 2:		
 				icom.fadeIn(stage,500);
@@ -369,18 +370,18 @@ $(document).ready(function(e) {
 		}//end if
 	}//end func
 //	地址
-	function map_handler(){
-		var map = new BMap.Map("map");
-		var point = new BMap.Point(112.84281,34.178611);
-		map.centerAndZoom(point,14);
-		var marker = new BMap.Marker(point);
-		map.addOverlay(marker);
-		window.setTimeout(function(){  
-		    map.panTo(new BMap.Point(112.842821,34.178735));    
-		}, 1000);
-	}//end func
+//	function map_handler(){
+//		var map = new BMap.Map("map");
+//		var point = new BMap.Point(112.84281,34.178611);
+//		map.centerAndZoom(point,14);
+//		var marker = new BMap.Marker(point);
+//		map.addOverlay(marker);
+//		window.setTimeout(function(){  
+//		    map.panTo(new BMap.Point(112.842821,34.178735));    
+//		}, 1000);
+//	}//end func
 	function shutter_handler(){
-		var intro = [{title:"爱要彼此相迎"},{title:"LIVES"},{title:"WEDDING-PARTY"},{title:"最美的遇见"},{title:"BEAUTY-BRIDE"},{title:"BEAUTY-BRIDE"},{title:"BEAUTY-BRIDE"},{title:"BEAUTY-BRIDE"},{title:"BEAUTY-BRIDE"},{title:"BEAUTY-BRIDE"}];
+		var intro = [{title:"爱要彼此相迎"},{title:"情不知所起，一往而深"},{title:"有你，便是阳光"},{title:"最美的遇见"},{title:"余生，请指教"},{title:"你是我人生最大的惊喜"},{title:"花时间来爱你"},{title:"best love in my life"},{title:"不忘初心"},{title:"相依 相偎"}];
     	$(".info-word").html('<h1>'+intro[0].title+'</h1>');
 		var shutterBanner = new shutterSwitch();
 	    var opts = {

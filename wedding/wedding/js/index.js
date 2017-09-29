@@ -35,7 +35,9 @@ $(document).ready(function(){
 				wx.ready(sound_creat);
 			}//edn catch
 		}//edn if
-		else sound_creat();
+		else {
+			sound_creat();
+		}
 	}//edn func
 	
 //	function sound_creat(){
@@ -46,11 +48,11 @@ $(document).ready(function(){
 		console.log("page_ready");
 	}//end func
 	
-	function bgmInit(){
+	function bgmInit(){		
 		if(os.weixin && window.wx) {
-			wx.ready(sound_creat)
+			wx.ready(sound_creat);
 		}else{
-			sound_creat();
+			sound_creat();		
 		}
 		function sound_creat(){
 			ibgm.init({src:'sound/bgm.mp3',webAudio:0});
@@ -90,15 +92,8 @@ $(document).ready(function(){
 	
 	//----------------------------------------页面逻辑代码----------------------------------------
 	function init_handler(){
-		console.log('init handler');
+//		console.log('init handler');
 //		icom.fadeOut(loadBox,500);
-		monitor_handler();
-		console.log('huawei:'+os.huawei)
-	}//end func
-	
-	//----------------------------------------页面监测代码----------------------------------------
-	function monitor_handler(){
-//		imonitor.add({obj:$('a.btnTest'),action:'touchstart',index:'',category:'',label:'测试按钮'});
-	}//end func
-	
+//		console.log('huawei:'+os.huawei);
+	}//end func	
 });//end ready

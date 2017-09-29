@@ -10,9 +10,9 @@ var ishare=importShare();
 	ishare.content={
 		link:ishare.url,
 		image:ishare.url+'images/share.jpg?v='+Math.random(),
-		title:$('title').html(),
-		friend:'发动给朋友的分享文案',
-		timeline:'发动到给朋友圈的分享文案'
+		title:'张俊刚&刘丹丹婚宴请柬',
+		friend:'诚挚邀请大家的到来，为我们见证与祝福',
+		timeline:'诚挚邀请大家的到来，为我们见证与祝福'
 	};
 	ishare.from=icom.getQueryString('from');
 	ishare.from=ishare.from||'friend';
